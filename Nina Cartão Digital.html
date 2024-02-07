@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29f21aa972.js" crossorigin="anonymous"></script>
+    <title>Nina Demarque</title>
+    <style>
+        :root {
+    --darkest: #023535;
+    --darker: #015958;
+    --dark: #008F8C;
+    --light-hot: #FACFCE;
+    --hot: #FC4A9A;
+    --lighter: #06DBA2;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: 'Space Mono', monospace;
+    --sans: 'Inter', sans-serif;;
+    --alt-font: 'Cabin Sketch', sans-serif;
+}
+
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* generic styles for the page */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--darkest);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+a {
+    color: var(--hot);
+}
+
+a:hover {
+    color: var(--light-hot);
+    text-decoration: none;
+}
+
+
+/* background color divs */
+
+
+.section-interests {
+    background-color: var(--darker)
+}
+
+.section-contact {
+    background-color: var(--dark);
+}
+
+.gradient {
+    background: linear-gradient(90deg, rgba(252, 74, 154, 1) 0%, rgba(6,219,162, 1) 100%);
+    height: 2px;
+}
+
+
+/* intro styles */
+
+#intro {
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--sans);
+    font-size: 1rem;
+}
+
+.name span {
+    font-family: var(--alt-font);
+    font-size: 4rem;
+    color: var(--lighter);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    margin: 0 0 2rem 0;
+}
+
+/* interests section */
+#interests {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#interests h2 {
+    font-family: var(--alt-font);
+    color: var(--light-hot);
+}
+
+#interests ul{
+    list-style-type: none;
+    font-weight: bolder;
+    line-height: 2;
+    padding: 0;
+}
+
+/* contact section */
+
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+#contact h2 {
+    font-family: var(--alt-font);
+    color: var(--light-hot);
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+
+/* navigation */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 4rem 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--lighter);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--lighter);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--hot);
+}
+
+.button {
+    background-color: var(--hot);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--mono);
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--light-hot);
+}
+
+
+/* footer section */
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+footer p:last-child {
+    font-size: 0.8rem;
+    font-family: var(--mono);
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
+.disabled {
+    display: none;
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <h1>
+                    <a href="index.html"><span class="fa-solid fa-ear-listen" aria-hidden="true"></span> Nina Demarque</a
+            >
+          </h1>
+        </li>
+        <li><a href="#interests">Atuação</a></li>
+            <li class ="disabled"><a href="clinica.html">Clínica</a></li>
+            <li><a href="#contact">Contato</a></li>
+            <li>
+                <a href="https://wa.me/5511955771990" target="_blank">
+                    <span class="fa-brands fa-square-whatsapp" aria-hidden="true"></span>
+                    <span class="sr-only">Whatsapp</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/nina_demarque" target="_blank">
+                    <span class="fa-brands fa-square-instagram" aria-hidden="true"></span>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://maps.app.goo.gl/Vsw81XeCE2VSczTf8" target="_blank">
+                    <span class="fa-solid fa-location-dot" aria-hidden="true"></span>
+                    <span class="sr-only">Localização</span>
+                </a>
+            </li>
+            <li class ="disabled">
+                <a href="curriculo.html" class="button">Currículo</a>
+            </li>
+      </ul>
+    </nav>
+
+    <section id="intro">
+      <p class="name">Olá, eu sou a <span>Nina Demarque.</span></p>
+      <h2>Fonoaudióloga, pedagoga e psicopedagoga.</h2>
+      <p>
+        Estou há mais de 10 anos trabalhando com desenvolvimento de crianças e adolescentes.
+      </p>
+      <p>
+        Atualmente atendo numa 
+        <a href="https://maps.app.goo.gl/Vsw81XeCE2VSczTf8" target="_blank">clínica própria</a>
+        ou online.
+      </p>
+    </section>
+
+    <div class="gradient"></div>
+
+    <div class="section-interests">
+    <section id="interests">
+        <h2>Áreas de Interesse e Atuação</h2>
+        <ul>
+            <li>Dificuldades de aprendizagem</li>
+            <li>Dislexia</li>
+            <li>TDAH</li>
+            <li>Autismo</li>
+            <li>Atrasos e trocas na fala e/ou escrita</li>
+            <li>Gagueira</li>
+            <li>Introdução alimentar</li>
+            <li>Dificuldade na amamentação</li>
+        </ul>
+    </section>
+    </div>
+
+    <div class="gradient"></div>
+
+    <div class="section-contact">
+      <section id="contact">
+        <h2>Entre em contato</h2>
+        <p>
+          Vamos conversar sobre o seu caso e como eu posso te ajudar.
+        </p>
+        <p><a href="mailto:nina.demarque@yahoo.com.br" class="button">Enviar Email</a></p>
+                </section>
+                </div>
+                <div class="gradient"></div>
+                <footer>
+                    <h2>Nina Demarque &middot; Fonoaudióloga e Psicopedagoga</h2>
+                    <ul>
+                        <li>
+                            <a href="https://wa.me/5511955771990" target="_blank">
+                                <span class="fa-brands fa-square-whatsapp" aria-hidden="true"></span>
+                                <span class="sr-only">Whatsapp</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/nina_demarque" aria-hidden="true" target="_blank">
+                                <span class="fa-brands fa-square-instagram"></span>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:nina.demarque@yahoo.com">
+                                <span class="fas fa-envelope" aria-hidden="true"></span>
+                                <span class="sr-only">Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://maps.app.goo.gl/Vsw81XeCE2VSczTf8" target="_blank">
+                                <span class="fa-solid fa-location-dot" aria-hidden="true"></span>
+                                <span class="sr-only">Localização</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p><small>&copy; 2024 Nina Demarque. All rights reserved.</small></p>
+                    <br>
+                    <p>Developed by <a href="mailto:vinicius.demarque@gmail.com">Vinícius Michelan Demarque</a></p>
+                </footer>
+</body>
+
+</html>
